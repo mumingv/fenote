@@ -1,5 +1,7 @@
 # [玩转Bootstrap（基础）](http://www.imooc.com/learn/141)
 
+所有示例：[链接](http://123.56.21.232:8252/video/imooc/bootstrap/basic)。
+
 ## Bootstrap简介
 
 ### Bootstrap简介
@@ -9,7 +11,7 @@ Bootstrap是一个前端开发框架，基于HTML5和CSS3。
 
 ### Bootstrap到底是什么
 
-示例：[链接](http://123.56.21.232:8252/video/imooc/bootstrap/basic/ch01/02_index.html)。
+略。
 
 
 ### 如何开始使用Bootstrap
