@@ -21,9 +21,6 @@ Bootstrap是一个前端开发框架，基于HTML5和CSS3。
 BootStrap中的JS插件依赖于jQuery，因此jQuery要在Bootstrap之前引用。
 </font>
 
-
-### 基本的HTML模板
-
 示例：[链接](http://123.56.21.232:8252/video/imooc/bootstrap/basic/ch01/03_basic_template.html)。
 
 #### 代码详解
@@ -57,6 +54,8 @@ BootStrap中的JS插件依赖于jQuery，因此jQuery要在Bootstrap之前引用
 <![endif]-->
 ```
 
+其中，bootstrap模板为使IE6、7、8版本（IE9以下版本）浏览器兼容html5新增的标签，引入html5shiv.min.js。同理，为使IE6、7、8版本浏览器兼容css3样式，引入respond.min.js。
+
 5.body最后加入Bootstrap和jQuey插件
 
 ```
@@ -65,6 +64,15 @@ BootStrap中的JS插件依赖于jQuery，因此jQuery要在Bootstrap之前引用
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="../../../../../bootstrap/js/bootstrap.min.js"></script>
 ```
+
+<font color="red">
+重要：一定要把css文件放在head中；把js文件放在body的最下面，并且jquery.min.js在前，bootstrap.min.js在后。
+</font>
+
+
+### 基本的HTML模板
+
+
 
 
 ### 全局样式
