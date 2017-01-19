@@ -6,7 +6,12 @@
 
 ## 目录
 0. [前言](#README)
+0. [Bootstrap](#docs/bootstrap)
 0. [参考资料](#docs/reference)
+
+
+## 视频笔记
+- [慕课网](#docs/video_imooc)
 
 
 ## 附录 
