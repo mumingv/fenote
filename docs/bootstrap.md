@@ -2,7 +2,9 @@
 
 ## 参考资料
 
-- [官网网站 (http://getbootstrap.com/)](http://getbootstrap.com/)
+- [英文官方下载网站 (http://getbootstrap.com/)](http://getbootstrap.com/)
+- [中文官方网站 (http://www.bootcss.com/)](http://www.bootcss.com/)
+- [Runoob教程 (http://www.runoob.com/bootstrap/bootstrap-tutorial.html)](http://www.runoob.com/bootstrap/bootstrap-tutorial.html)
 
 
 ### Bootstrap下载

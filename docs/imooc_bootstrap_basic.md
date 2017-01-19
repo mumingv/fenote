@@ -72,10 +72,33 @@ BootStrap中的JS插件依赖于jQuery，因此jQuery要在Bootstrap之前引用
 
 ### 基本的HTML模板
 
-
+略。
 
 
 ### 全局样式
+
+示例：[链接](http://123.56.21.232:8252/video/imooc/bootstrap/basic/ch01/05_reset_css.html)。
+
+全局样式是reset.css。
+
+<font color="red">
+Bootstrap基于注重各浏览器原来的表现的思想，不会对原有样式进行完全重置（清零），而是在原有表现的基础之上进行细节优化。
+</font>
+
+Bootstrap的一些细节优化点如下：
+1. 移除body的margin声明
+2. 设置body的背景色为白色
+3. 为排版设置了基本的字体、字号和行高
+4. 设置全局链接颜色，且当链接处于悬浮“:hover”状态时才会显示下划线样式
+
+<font color="red">
+【知识点】jumbotron类表示超大屏幕，示例参考：[链接](http://www.runoob.com/bootstrap/bootstrap-jumbotron.html)。
+</font>
+
+
+
+
+
 
 
 ## 排版
