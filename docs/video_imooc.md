@@ -3,6 +3,8 @@
 ## HTML/CSS
 
 - [IT菜鸟逆袭指南（江湖篇）](#docs/imooc_htmlcss_itbird)
+- [CSS深入理解之border](#docs/imooc_htmlcss_border)
+
 
 ## Bootstrap
 
