@@ -28,7 +28,96 @@
 
 ## 伸缩菜单的制作--水平方向
 
+使用Javascript或者jQuery进行伸缩控制。
 
-## 总结
+
+## 总结：二级菜单下拉列表
+
+二级菜单下拉列表制作步骤：
+
+1.去除li标签的样式(list-style-type属性作用于ul或li标签都可以)
+
+```css
+ul {
+  list-style-type: none;
+}
+```
+
+2.去除所有元素的边距和填充，并设置页面整体的字体大小
+
+```css
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+```
+    
+3.设置所有li元素的宽度并进行浮动
+
+```css
+ul.nav li {
+  width: 120px;
+  float: left;
+}
+```
+
+4.设置整个菜单栏的轮廓，包括：宽度、高度、左边距和下边框
+
+```css
+ul.nav {
+  width: 600px;
+  height: 30px;
+  margin-left: 50px;
+  border-bottom: 5px solid #f60;
+}
+```
+
+5.设置a元素为块元素，并且设置宽度和高度
+
+<font color="red">说明：设置a元素的宽度和高度之前，必须先将其设置为块元素；因为只有块元素才能设置宽度和高度，而a元素是内联元素。</font>
+
+```css
+ul.nav li a {
+  display: block;
+  width: 120px;
+  height: 30px;
+}
+```
+
+6.将a元素内的文字水平居中对齐(使用text-align属性)，以及垂直居中对齐(使用line-height属性)
+
+```css
+ul.nav li a {
+  text-align: center;
+  line-height: 30px;
+}
+```
+
+7.去除a元素内文字的下划线
+
+```css
+ul.nav li a {
+  text-decoration: none;
+}
+```
+
+8.设置a元素的文本颜色以及背景色
+
+```css
+ul.nav li a {
+  color: #333;
+  background-color: #efefef;
+}
+```
+
+
+
+
+
+
+
+
+
 
 
