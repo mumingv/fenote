@@ -111,8 +111,39 @@ ul.nav li a {
 }
 ```
 
+9.设置子菜单的宽高、背景色，并且将其隐藏
 
+```css
+ul.subnav {
+  width: 120px;
+  height: 0;
+  overflow: hidden;
+}
+ul.subnav li a {
+  background-color: #ddd;
+}
+ul.subnav li a:hover {
+  background-color: #efefef;
+}
+```
 
+10.使用jQuery设置动画效果
+
+```javascript
+<script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+$(function() {
+  $("li").hover(
+    function() {
+        $(this).children("ul").stop().animate({"height":"120px"}, 200)
+    },
+    function() {
+        $(this).children("ul").stop().animate({"height":"0px"}, 200)
+    }
+   )
+})
+</script>
+```
 
 
 
