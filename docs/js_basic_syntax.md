@@ -24,6 +24,12 @@
 
 ## 函数
 
+```javascript
+function displayDate() {
+    document.getElementById("demo").innerHTML=Date();
+}
+```
+
 
 ## 字符串
 
