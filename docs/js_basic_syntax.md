@@ -16,7 +16,17 @@
 # ...
 ```
 
+
 ## 类型
+
+JS支持7钟数据类型：
+- 字符串（String）
+- 数字(Number)
+- 布尔(Boolean)
+- 数组(Array)
+- 对象(Object)
+- 空（Null）
+- 未定义（Undefined）
 
 
 ## 变量
