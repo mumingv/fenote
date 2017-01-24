@@ -5,6 +5,13 @@
 - [《菜鸟教程》CSS示例](http://www.runoob.com/css/css-examples.html)
 
 
+## Javascript
+
+
+## jQuery
+
+- [书籍：《锋利的jQuery》](http://123.56.21.232:8252/books/sharp_jquery/)
+
 
 ## Bootstrap
 
