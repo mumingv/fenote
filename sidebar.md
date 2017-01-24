@@ -14,6 +14,9 @@
 0. [参考资料](#docs/reference)
 
 
+## 读书笔记
+- [《锋利的jQuery》](#docs/book_sharp_jquery)
+
 ## 视频笔记
 - [慕课网](#docs/video_imooc)
 
