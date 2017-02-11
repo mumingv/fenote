@@ -7,6 +7,11 @@
 - [《导航条菜单的制作》](#docs/imooc_htmlcss_nav_bar)
 
 
+## JavaScript
+
+- [搜索框制作](#docs/imooc_js_search_box)
+
+
 ## Bootstrap
 
 - [《玩转Bootstrap（基础）》](#docs/imooc_bootstrap_basic)
