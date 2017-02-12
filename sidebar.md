@@ -10,6 +10,7 @@
 0. [Javascript](#docs/js)
 0. [Bootstrap](#docs/bootstrap)
 0. [jQuery](#docs/jquery)
+0. [Sublime](#docs/sublime)
 0. [示例](#docs/demo)
 0. [参考资料](#docs/reference)
 
