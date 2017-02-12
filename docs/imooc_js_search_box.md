@@ -1,6 +1,6 @@
 # [搜索框制作](http://www.imooc.com/learn/21)
 
-所有示例：[链接](http://123.56.21.232:8252/video/imooc/js/search_box/)。
+所有示例：[链接](http://123.56.21.232:8252/video/imooc/js/search_box/index.html)。
 
 ## 搜索框制作步骤详解
 
