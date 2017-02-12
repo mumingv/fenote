@@ -20,7 +20,7 @@
     <div class="search-box">
         <div class="search-logo"></div>
         <form class="search-form" action="/search" target="_blank">
-            <input type="text" class="search-text" name="q" />
+            <input type="text" class="search-text" name="q" autocomplete="off" />
             <input type="submit" class="search-button" />
         </form>
     </div>
@@ -31,6 +31,25 @@
 - logo
 - 文本框
 - 搜索按钮
+
+<font color="red">
+文本框的autocomplete="off"用于关闭表单的自动填充功能。
+</font>
+
+
+#### 3. [可选]智能提示动态效果
+
+```
+<div class="suggest" id="search-suggest" style="display:none;">
+    <ul>
+        <li>苹果</li>
+        <li>香蕉</li>
+        <li>橘子</li>
+    </ul>
+</div>
+```
+
+
 
 
 ### CSS样式
@@ -168,7 +187,48 @@ input.search-text {
 ```
 
 
+#### 9. [可选]智能提示动态效果的样式
+
+```
+div.suggest {
+    width: 387px;
+    background-color: #fff;
+    border: 1px solid #999;
+}
+div.suggest ul {
+    list-style: none;
+}
+div.suggest ul li {
+    padding: 3px;
+    line-height: 25px;
+    cursor: pointer;
+}
+div.suggest ul li:hover {
+    text-decoration: underline;
+    background-color: #eee;
+}
+```
+
+
 ### JS交互(使用jQuery)
+
+
+#### 1. 加载jQuery脚本
+
+```javascript
+<body>
+    ...
+    <script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+</body>
+```
+
+<font color="red">
+script脚本代码在<body>的最后加载。
+</font>
+
+
+#### 2. [可选]智能提示动态效果的样式
+
 
 
 ## 简单搜索框制作
