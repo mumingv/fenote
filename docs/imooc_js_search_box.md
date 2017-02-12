@@ -2,6 +2,173 @@
 
 所有示例：[链接](http://123.56.21.232:8252/video/imooc/js/search_box/)。
 
+## 搜索框制作步骤详解
+
+### HTML框架和内容
+
+#### 1. 使用Sublime的Emmet插件生成HTML框架
+
+方法：输入“!”后按<TAB> 或 <Ctrl + E> 。
+
+
+#### 2. 构造搜索框
+
+```css
+<body>
+    <div class="search-box">
+        <div class="search-logo"></div>
+        <form class="search-form" action="/search" target="_blank">
+            <input type="text" class="search-text" name="q" />
+            <input type="submit" class="search-button" />
+        </form>
+    </div>
+</body>
+```
+
+搜索框包含三部分，分别是：
+- logo
+- 文本框
+- 搜索按钮
+
+
+### CSS样式
+
+#### 1. 清除默认样式并设置页面背景色
+
+```
+<style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+    }
+    body {
+        background-color: #fff;
+    }
+</style>
+```
+
+
+#### 2. 定位搜索框，将其移动到要展示的位置
+
+```css
+div.search-box {
+    position: absolute;
+    top: 150px;
+    left: 200px;
+}
+```
+
+对于定位类型(position)主要有三种：
+- 相对定位(relative)：相对于元素本来的位置进行定位
+- 绝对定位(absolute): 相对于父元素进行定位
+- 固定定位(fixed): 相对于浏览器窗口进行定位
+
+
+#### 3. 载入logo，即将logo设置为背景色
+
+```css
+div.search-logo {
+    width: 107px;
+    height: 53px;
+    background-image: url("image/bf_logo.jpg");
+}
+```
+
+<font color="red">
+由于div.search-logo是个空div，没有大小。所以在设置background-image属性之前一定要先设置div的宽高。
+</font>
+
+
+#### 4. 将search-logo和search-form显示在同一行，使用float属性
+
+```css
+div.search-logo {
+    float: left;
+}
+form.search-form {
+    float: left;
+}
+```
+
+
+#### 5. 设置文本框样式：宽、高、行高、边框、轮廓
+
+```css
+input.search-text {
+    width: 350px;
+    height: 29px;
+    line-height: 29px;
+    border: 1px solid #aaa;
+    outline: none;
+}
+```
+
+<font color="red">
+文本框有默认的轮廓效果，需要显式地去除。
+</font>
+
+
+#### 6. 设置搜索按钮样式：宽、高、背景图片
+
+首先需要去除按钮的默认样式(带有"提交"字样的文字)，通过设置value=""实现。
+
+```
+<input type="submit" class="search-button" value="" />
+```
+
+去除默认边框并设置宽、高、背景图片。
+
+```css
+input.search-button {
+    border: 0;
+    width: 29px;
+    height: 29px;
+    background-image: url("image/bf-search-button.png");
+}
+```
+
+
+#### 7. 将各元素显示在同一行：浮动、边距、填充
+
+将文本框和搜索按钮显示在同一行。
+
+```css
+input.search-text {
+    float: left;
+}
+input.search-button {
+    float: left;
+}
+```
+
+将logo和搜索表单(包含文本框和搜索按钮)显示在同一行。
+
+```css
+div.search-logo {
+    margin: -8px 5px 0 0;
+}
+form.search-form {
+    padding: 3px;
+}
+```
+
+
+#### 8. 将显示的边框包含文本框和按钮
+
+```css
+form.search-form {
+    border: 1px solid #aaa;
+}
+input.search-text {
+    border: 0;
+}
+```
+
+
+### JS交互(使用jQuery)
+
+
 ## 简单搜索框制作
 
 ### 搜索框介绍
