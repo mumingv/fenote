@@ -209,6 +209,10 @@ div.suggest ul li:hover {
 }
 ```
 
+<font color="red">
+注意：需要去除ul的样式，使用list-style: none;。
+</font>
+
 
 ### JS交互(使用jQuery)
 
@@ -227,8 +231,38 @@ script脚本代码在<body>的最后加载。
 </font>
 
 
-#### 2. [可选]智能提示动态效果的样式
+#### 2. [可选]智能提示动态效果的交互
 
+<font color="red">
+说明：静态元素使用绑定(bind)，动态元素使用代理(delegate)。
+</font>
+
+```javascript
+<script>
+$(".search-text").bind("keyup", function(){
+    var searchText = $(this).val();
+    $.get("/video/imooc/js/search_box/index.php?q=" + searchText, function(data) {
+        var htmlText = "";
+        for (var i = 0; i < data.length; i++) {
+            htmlText += "<li>"+data[i]+"</li>";
+        }
+        $(".suggest>ul").html(htmlText);
+        $(".suggest").show().css({
+            position: "absolute",
+            top: $(".search-form").offset().top + $(".search-form").height() + 7,
+            left: $(".search-form").offset().left
+        });
+    }, "json");
+});
+$(document).bind("click", function() {
+    $(".suggest").hide(); 
+});
+$(document).delegate("li", "click", function() {
+    var keyword = $(this).text();
+    location.href = "https://www.baidu.com/s?wd=" + keyword; 
+});
+</script>
+```
 
 
 ## 简单搜索框制作
