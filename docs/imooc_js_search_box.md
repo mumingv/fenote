@@ -4,6 +4,8 @@
 
 ## 搜索框制作步骤详解
 
+示例：[链接](http://123.56.21.232:8252/video/imooc/js/search_box/my_search_box.html)。
+
 ### HTML框架和内容
 
 #### 1. 使用Sublime的Emmet插件生成HTML框架
