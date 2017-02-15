@@ -19,8 +19,13 @@
 ## 读书笔记
 - [《锋利的jQuery》](#docs/book_sharp_jquery)
 
+
 ## 视频笔记
 - [慕课网](#docs/video_imooc)
+
+
+## 项目笔记
+- [aitree](#docs/project_aitree)
 
 
 ## 附录 
