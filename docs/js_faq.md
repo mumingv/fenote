@@ -11,7 +11,7 @@
 <script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
 ```
 
-行内公式使用：$...$
+行内公式使用：\\(...\\) 或 $...$
 
-整行公式使用：$$...$$
+整行公式使用：\\[ \\] 或 $$...$$
 
