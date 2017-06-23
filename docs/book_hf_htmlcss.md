@@ -37,3 +37,15 @@ http://www.unicode.org/charts/
 ## 连接起来
 
 略。
+
+
+## 为你的页面增加图像
+
+略。
+
+
+## 标准及其他
+
+官方HTML验证工具：http://validator.w3.org/
+
+
