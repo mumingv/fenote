@@ -51,7 +51,9 @@ http://www.unicode.org/charts/
 
 ## CSS入门
 
-略。
+官方CSS验证工具：http://jigsaw.w3.org/css-validator/
+
+
 
 
 
