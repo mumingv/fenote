@@ -56,19 +56,9 @@ http://www.unicode.org/charts/
 
 ## 增加字体和颜色样式
 
-略。
+字体网站：https://www.fontsquirrel.com/
 
-
-
-
-
-
-
-
-
-
-
-
+字体托管网站：https://fonts.google.com/
 
 
 
