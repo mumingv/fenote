@@ -154,6 +154,32 @@ h2 { font-size: 120% }
 ```
 
 
+## font-style 字体样式
+
+属性取值：normal、italic和oblique。italic表示使用斜体字体，oblique表示使用倾斜文字。
+
+###  
+
+```css
+h1 {
+  font-style: italic;
+}
+```
+
+
+## font-weight 字体粗细
+
+属性取值：normal和bold。其他取值（如：ligther和bolder，以及100的整数倍）都不要使用。
+
+###  
+
+```css
+h1 {
+  font-weight: normal;
+}
+```
+
+
 
 
 
