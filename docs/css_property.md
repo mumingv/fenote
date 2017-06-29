@@ -23,6 +23,32 @@
 |background-color   |背景颜色           ||
 
 
+## color 前景色
+
+该属性控制元素的前景色，包含文本颜色和边框颜色。如果需要单独设置边框颜色的话，可以使用border-color属性。
+
+###  
+
+示例：
+
+```css
+h1 {
+  color: red;    
+}
+```
+
+示例：制定颜色的几种方式
+
+```css
+h1 {
+  color: silver;    
+  color: rgb(80%, 40%, 0%);
+  color: rgb(204, 102, 0);
+  color: #cc6600;
+}
+```
+
+
 ## @font-face 自定义字体
 
 ######  
@@ -179,6 +205,27 @@ h1 {
 }
 ```
 
+
+## text-decoration 文本装饰
+
+属性取值：none, line-throuth, underline, overline。
+
+###   
+
+示例：删除线
+
+```css
+em {
+  text-decoration: line-throuth;
+}
+```
+
+示例：同时增加下划线和上划线
+```css
+em {
+  text-decoration: underline overline;
+}
+```
 
 
 
