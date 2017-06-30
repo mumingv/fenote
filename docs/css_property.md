@@ -25,10 +25,49 @@
 
 ## background-color 背景颜色
 
-说明：背景颜色会延伸到内边距和边框（不会延伸到外边距）。
+说明：背景颜色会延伸到内边距和边框（不会延伸到外边距），如果边框是锯齿形的就能够看到背景色。
 
 ```css
 background-color: #a7cece;
+```
+
+
+## background-image 背景图像
+
+说明：
+
+1. 背景图像会延伸到内边距和边框（不会延伸到外边距），如果边框是锯齿形的就能够看到背景图像；
+2. url可以是相对路径，也可以是绝对路径；
+3. url不需要加引号；
+4. 默认情况下，背景图像是重复的。
+
+```css
+background-image: url(images/background.gif);
+```
+
+
+## background-position 背景图像位置
+
+位置可以按照像素、百分数或者关键字来指定。
+
+###  
+
+```css
+background-position: top left;
+```
+
+
+## background-repeat 背景图像重复
+
+可能取值：
+- no-repeat
+- repeat-x
+- repeat-y
+
+###  
+
+```css
+background-repeat: no-repeat;
 ```
 
 
@@ -178,6 +217,14 @@ body {
 }
 ```
 
+示例：使用serif字体系列
+
+```css
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+```
+
 示例：使用monospace字体系列，字体名称中包含括号
 
 ```css
@@ -265,6 +312,167 @@ h1 {
 body {
   line-height: 1.6em;
 }
+```
+
+
+## margin 外边距
+
+###  
+
+示例：
+
+```css
+margin: 25px;
+```
+
+
+## padding 内边距
+
+###  
+
+示例：
+
+```css
+padding: 25px;
+```
+
+
+## text-decoration 文本装饰
+
+属性取值：none, line-throuth, underline, overline。
+
+###   
+
+示例：删除线
+
+```css
+em {
+  text-decoration: line-throuth;
+}
+```
+
+示例：同时增加下划线和上划线
+```css
+em {
+  text-decoration: underline overline;
+}
+```
+
+
+
+
+
+
+
+示例：使用monospace字体系列，字体名称中包含括号
+
+```css
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+```
+
+
+## font-size 字体大小
+
+######  
+
+设置字体大小的几种方式：
+
+|方式            	|含义           |备注               		|
+|-------------------|---------------|---------------------------|
+|px                 |像素           |示例：12px                 |
+|%                  |基于父元素的百分比|示例：120%              |
+|em                 |基于父元素的百分比|示例：1.2em             |
+|关键字             |如：small、medium等|small一般为12px        |
+
+#### 关键字取值
+
+- xx-small
+- x-small
+- small
+- medium
+- large
+- x-large
+- xx-large
+
+
+#### 默认大小
+
+默认字体大小为16px，h1为200%，h2为150%，h3为120%，h4为100%，h5和h6更小一些。
+
+
+###  
+
+示例：推荐使用方式
+
+```css
+body { font-size: small; }
+h1 { font-size: 150% }
+h2 { font-size: 120% }
+```
+
+
+## font-style 字体样式
+
+属性取值：normal、italic和oblique。italic表示使用斜体字体，oblique表示使用倾斜文字。
+
+###  
+
+```css
+h1 {
+  font-style: italic;
+}
+```
+
+
+## font-weight 字体粗细
+
+属性取值：normal和bold。其他取值（如：ligther和bolder，以及100的整数倍）都不要使用。
+
+###  
+
+```css
+h1 {
+  font-weight: normal;
+}
+```
+
+
+## line-height 行高/行间距
+
+单位可以是：px, em, %。
+
+###  
+
+示例：
+
+```css
+body {
+  line-height: 1.6em;
+}
+```
+
+
+## margin 外边距
+
+###  
+
+示例：
+
+```css
+margin: 25px;
+```
+
+
+## padding 内边距
+
+###  
+
+示例：
+
+```css
+padding: 25px;
 ```
 
 
