@@ -71,6 +71,46 @@ background-repeat: no-repeat;
 ```
 
 
+## border 边框
+
+可以同时指定边框的宽度、样式、颜色。
+
+###  
+
+```
+border: 1px solid red;
+```
+
+
+## border-width 边框宽度
+
+###  
+
+```css
+border-width: 1px;
+```
+
+
+## border-style 边框样式
+
+常用取值：
+
+- solid 实线
+- dashed 点线
+- dashed 虚线
+- double 双实线
+- groove 凹形
+- ridge 凸形
+- inset 
+- outset 
+
+###  
+
+```css
+border-style: dashed;
+```
+
+
 ## border-color 边框颜色
 
 说明：因为背景颜色会延伸到内边距和边框（不会延伸到外边距），所以有背景色且边框样式为dashed的情况下是可以将边框颜色指定为白色的。
@@ -80,32 +120,84 @@ border-color: white;
 ```
 
 
-## border-style 边框样式
+## border-top 上边框
 
-常用取值：
-
-- solid
-- dashed
+参考：border。
 
 
-###  
+## border-top-width 上边框宽度
 
-示例：
-
-```css
-border-style: dashed;
-```
+参考：border-width。
 
 
-## border-width 边框宽度
+## border-top-style 上边框样式
 
-###  
+参考：border-style。
 
-示例：
 
-```css
-border-width: 1px;
-```
+## border-top-color 上边框颜色
+
+参考：border-color。
+
+
+## border-right 右边框
+
+参考：border。
+
+
+## border-right-width 右边框宽度
+
+参考：border-width。
+
+
+## border-right-style 右边框样式
+
+参考：border-style。
+
+
+## border-right-color 右边框颜色
+
+参考：border-color。
+
+
+## border-bottom 下边框
+
+参考：border。
+
+
+## border-bottom-width 下边框宽度
+
+参考：border-width。
+
+
+## border-bottom-style 下边框样式
+
+参考：border-style。
+
+
+## border-bottom-color 下边框颜色
+
+参考：border-color。
+
+
+## border-left 左边框
+
+参考：border。
+
+
+## border-left-width 左边框宽度
+
+参考：border-width。
+
+
+## border-left-style 左边框样式
+
+参考：border-style。
+
+
+## border-left-color 左边框颜色
+
+参考：border-color。
 
 
 ## color 前景色
