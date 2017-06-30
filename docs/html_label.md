@@ -70,12 +70,28 @@
 |type				|外部信息类型 						|可选|
 |rel				|指明HTML文件和所连接文件之间的关系	|必要|
 |href				|超链接 							|必要|
+|media              |媒体查询，即：指定哪些端使用该样式 |可选|
 
+media属性也可以通过css的@media选择器指定。
 
-### 示例: 给页面增加样式
+###  
+
+示例: 给页面增加样式
 
 ```html
 <link rel="stylesheet" type="text/css" href="lounge.css">
+```
+
+示例：媒体类型为打印机时才使用该格式
+
+```html
+<link rel="stylesheet" type="text/css" href="lounge.css" media="print">
+```
+
+示例：媒体类型为有屏设备且设备宽度不超过480像素时才使用该格式
+
+```html
+<link rel="stylesheet" type="text/css" href="lounge.css" media="screen and (max-device-width: 480px)">
 ```
 
 

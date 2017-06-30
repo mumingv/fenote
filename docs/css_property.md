@@ -84,6 +84,8 @@ border: 1px solid red;
 
 ## border-width 边框宽度
 
+宽度可以使用px或者关键字（thin, medium, thick）来设置。
+
 ###  
 
 ```css
@@ -447,6 +449,35 @@ body {
 
 ```css
 margin: 25px;
+```
+
+
+## @media 媒体查询
+
+端类型：
+- screen 有屏设备
+- print 打印设备
+
+其他属性：
+- max-width 浏览器最大宽度
+- min-width 浏览器最小宽度
+- max-device-width 设备最大宽度
+- min-device-width 设备最小宽度
+- orientation 显示方向，取值：landscape（横向）、portrait（纵向）
+
+###  
+
+```css
+@media screen and (min-device-width: 481px) {
+  #guarantee {
+    margin-right: 250px;
+  }    
+}
+@media print {
+  body {
+    font-family: Times, "Times New Roman", serif;
+  }
+}
 ```
 
 
