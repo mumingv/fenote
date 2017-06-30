@@ -328,12 +328,48 @@ margin: 25px;
 
 ## padding 内边距
 
-###  
+如果同时指定了padding-top、padding-right、padding-bottom、padding-left属性，则效果不会叠加，后面的属性值会覆盖前面的。
 
-示例：
+###  
 
 ```css
 padding: 25px;
+```
+
+
+## padding-top 上内边距
+
+###  
+
+```css
+padding-top: 80px;
+```
+
+
+## padding-right 右内边距
+
+###  
+
+```css
+padding-right: 80px;
+```
+
+
+## padding-bottom 下内边距
+
+###  
+
+```css
+padding-bottom: 80px;
+```
+
+
+## padding-left 左内边距
+
+###  
+
+```css
+padding-left: 80px;
 ```
 
 
