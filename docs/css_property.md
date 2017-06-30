@@ -96,7 +96,7 @@ border-width: 1px;
 常用取值：
 
 - solid 实线
-- dashed 点线
+- dotted 点线
 - dashed 虚线
 - double 双实线
 - groove 凹形
