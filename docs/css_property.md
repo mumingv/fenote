@@ -200,6 +200,38 @@ border-color: white;
 参考：border-color。
 
 
+## border-radius 边框圆角
+
+属性值表示圆角半径。单位可以使用px或者em，使用em表示相对于元素的字体大小而言。
+
+###  
+
+```css
+border-radius: 15px;
+border-radius: 1.5em;
+```
+
+
+## border-top-left-radius 左上角边框圆角
+
+参考：border-radius。
+
+
+## border-top-right-radius 右上角边框圆角
+
+参考：border-radius。
+
+
+## border-bottom-left-radius 左下角边框圆角
+
+参考：border-radius。
+
+
+## border-bottom-right-radius 右下角边框圆角
+
+参考：border-radius。
+
+
 ## color 前景色
 
 该属性控制元素的前景色，包含文本颜色和边框颜色。如果需要单独设置边框颜色的话，可以使用border-color属性。
