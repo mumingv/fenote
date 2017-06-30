@@ -16,6 +16,7 @@
 - font-size (字体大小)
 - font-weight (字体粗细)
 - font-style (字体样式：是否斜体)
+- line-height（行高／行间距）
 
 不能继承的样式有：
 

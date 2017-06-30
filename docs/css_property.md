@@ -23,6 +23,52 @@
 |background-color   |背景颜色           ||
 
 
+## background-color 背景颜色
+
+说明：背景颜色会延伸到内边距和边框（不会延伸到外边距）。
+
+```css
+background-color: #a7cece;
+```
+
+
+## border-color 边框颜色
+
+说明：因为背景颜色会延伸到内边距和边框（不会延伸到外边距），所以有背景色且边框样式为dashed的情况下是可以将边框颜色指定为白色的。
+
+```css
+border-color: white;
+```
+
+
+## border-style 边框样式
+
+常用取值：
+
+- solid
+- dashed
+
+
+###  
+
+示例：
+
+```css
+border-style: dashed;
+```
+
+
+## border-width 边框宽度
+
+###  
+
+示例：
+
+```css
+border-width: 1px;
+```
+
+
 ## color 前景色
 
 该属性控制元素的前景色，包含文本颜色和边框颜色。如果需要单独设置边框颜色的话，可以使用border-color属性。
@@ -93,6 +139,7 @@ h1 {
 - Arial
 - Arial Black
 - Trebuchet MS
+- Helvetica
 
 
 #### 常见serif字体
@@ -202,6 +249,21 @@ h1 {
 ```css
 h1 {
   font-weight: normal;
+}
+```
+
+
+## line-height 行高/行间距
+
+单位可以是：px, em, %。
+
+###  
+
+示例：
+
+```css
+body {
+  line-height: 1.6em;
 }
 ```
 
