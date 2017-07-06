@@ -273,6 +273,22 @@ h1 {
 ```
 
 
+## float 浮动
+
+说明：浮动元素会脱离文档流，对于其后的块元素，会在其下方布局，但是块元素中的内联元素会围绕该浮动元素。
+
+###  
+
+示例：浮动一般配合width属性使用
+
+```css
+#amazing {
+  width: 200px;
+  float: right;
+}
+```
+
+
 ## @font-face 自定义字体
 
 ######  
@@ -545,6 +561,30 @@ padding-bottom: 80px;
 
 ```css
 padding-left: 80px;
+```
+
+
+## position 定位
+
+取值：
+- static  静态定位，即浏览器默认使用的定位方式
+- absolute  绝对定位，基于页面进行定位。与浮动float相比，区别在于其后的内联元素不会围绕在其周围
+- fixed  固定定位，基于浏览器窗口进行定位
+- relative  相对定位，基于原来位置进行定位
+
+定位属性通常与top、right、bottom、left属性共同使用。
+
+###  
+
+示例：绝对定位
+
+```css
+#sidebar {
+  width: 280px;
+  position: absolute;
+  top: 100px;
+  right: 200px;
+}
 ```
 
 
