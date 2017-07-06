@@ -65,6 +65,14 @@ http://www.unicode.org/charts/
 
 ## 盒模型
 
+略。
+
+
+## div与span
+
+div用于为块级内容创建逻辑划分，而span元素则以类似的方式建立内联内容的逻辑分组。
+
+
 
 
 

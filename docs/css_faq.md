@@ -11,7 +11,7 @@
 
 能继承的样式有：
 
-- color (字体颜色)
+- color (前景色)
 - font-family (字体系列)
 - font-size (字体大小)
 - font-weight (字体粗细)

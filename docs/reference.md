@@ -7,6 +7,11 @@
 - [Javascript菜鸟教程: http://www.runoob.com/js](http://www.runoob.com/js)
 
 
+## 书籍
+
+- [CSS Pocket Reference](http://www.java1234.com/a/javabook/webbase/2016/0613/6254.html)
+
+
 ## 框架/模板
 
 - [H-ui 基于Bootstrap开发的前端框架](http://www.h-ui.net/)

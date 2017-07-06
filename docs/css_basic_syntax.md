@@ -71,6 +71,19 @@ p#footer {
 ```
 
 
+### 伪类选择器
+
+a元素的伪类选择器，有如下5种（建议按这个顺序指定样式）：
+- a:link  未访问
+- a:visited  已访问
+- a:hover  悬停
+- a:focus  焦点（使用TAB键触发）
+- a:active  鼠标点击按下未抬起
+
+其他伪类选择器有：
+- :first-child
+- :last-child
+
 
 
 

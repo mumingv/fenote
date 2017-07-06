@@ -293,8 +293,28 @@ h1 {
 @font-face {
   font-family: "Emblema One";
   src: url("http://wickedlysmart.com/hfhtmlcss/chapter8/journal/EmblemaOne-Regular.woff"), 
-  url("http://wickedlysmart.com/hfhtmlcss/chapter8/journal/EmblemaOne-Regular.ttf"); 
+       url("http://wickedlysmart.com/hfhtmlcss/chapter8/journal/EmblemaOne-Regular.ttf"); 
 }
+```
+
+
+## font 字体
+
+简写形式：
+
+```css
+font: font-style font-variant font-weight font-size/line-height font-family
+```
+
+其中：
+1. font-style、font-variant、font-weight以及line-height都是可选的；
+2. line-height的写法和其他属性不一样；
+3. font-family各字体之间要使用逗号分隔；
+
+###   
+
+```css
+font: small/1.6em Verdana, Helvetica, Arial, sans-serif
 ```
 
 
@@ -436,6 +456,19 @@ h1 {
 h1 {
   font-weight: normal;
 }
+```
+
+
+## font-variant 小型大写字母
+
+取值：
+- normal
+- small-caps
+
+###  
+
+```css
+font-variant: small-caps;
 ```
 
 
@@ -619,7 +652,7 @@ h1 {
 
 ## line-height 行高/行间距
 
-单位可以是：数字、px, em, %。
+单位可以是：数字、px, em, %, normal。
 
 ###  
 
@@ -636,6 +669,14 @@ body {
 ```css
 body {
   line-height: 1.6;
+}
+```
+
+示例：设置合理的行间距
+
+```css
+body {
+  line-height: normal;
 }
 ```
 
@@ -686,6 +727,23 @@ padding: 25px;
 ```
 
 
+## text-align 文本对齐（块元素属性）
+
+取值：
+- justify
+- left
+- center
+- right
+
+###  
+
+```css
+h1 {
+  text-align: left;
+}
+```
+
+
 ## text-decoration 文本装饰
 
 属性取值：none, line-throuth, underline, overline。
@@ -707,6 +765,16 @@ em {
 }
 ```
 
+
+## width 内容区宽度
+
+###   
+
+```css
+#id {
+  width: 20px;
+}
+```
 
 
 
