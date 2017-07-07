@@ -273,6 +273,36 @@ h1 {
 ```
 
 
+## display 显示(元素的框类型）
+
+取值：
+- table 表格
+- table-row 表格中的行
+- table-cell 表格中的单元格
+
+###  
+
+示例：表格显示布局（两栏）
+
+```css
+#tableContainer {
+  display: table;
+  border-spacing: 10px;
+}
+#tableRow {
+  display: table-row;
+}
+#main {
+  display: table-cell;
+  vertical-align: top;
+}
+#sidebar {
+  display: table-cell;
+  vertical-align: top;
+}
+```
+
+
 ## float 浮动
 
 说明：浮动元素会脱离文档流，对于其后的块元素，会在其下方布局，但是块元素中的内联元素会围绕该浮动元素。
@@ -584,6 +614,58 @@ padding-left: 80px;
   position: absolute;
   top: 100px;
   right: 200px;
+}
+```
+
+
+## top 定位元素上边偏移量
+
+###  
+
+```css
+#sidebar {
+  width: 280px;
+  position: absolute;
+  top: 100px;
+}
+```
+
+
+## right 定位元素右边偏移量
+
+###  
+
+```css
+#sidebar {
+  width: 280px;
+  position: absolute;
+  right: 100px;
+}
+```
+
+
+## bottom 定位元素下边偏移量
+
+###  
+
+```css
+#sidebar {
+  width: 280px;
+  position: absolute;
+  bottom: 100px;
+}
+```
+
+
+## left 定位元素左边偏移量
+
+###  
+
+```css
+#sidebar {
+  width: 280px;
+  position: absolute;
+  left: 100px;
 }
 ```
 
