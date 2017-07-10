@@ -109,3 +109,15 @@ media属性也可以通过css的@media选择器指定。
 
 ### 示例
 
+
+## article(H5)
+## nav(H5)
+## header(H5)
+## footer(H5)
+## time(H5)
+## aside(H5)
+## section(H5)
+## video(H5)
+
+
+
