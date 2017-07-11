@@ -247,6 +247,46 @@ border-radius: 1.5em;
 参考：border-radius。
 
 
+## border-collapse 表格单元格边框折叠/合并
+
+使得相邻的两个单元格共用一个边框，边框宽度为单个边框的宽度。
+
+取值：
+- collapse 折叠
+- separate 分离（默认值）
+
+###  
+
+```css
+table {
+  border-collapse: collapse;
+}
+```
+
+
+## border-spacing 表格单元格边框间距
+
+边框间距相当于单元格的外边距。表格中的单元格不使用外边距，但可以使用边框和内边距。
+
+###  
+
+示例：去除表格单元格之间的间距，使得两个单元格共用一条边框（宽度为单个边框宽度的两倍）
+
+```css
+table {
+  border-spacing: 0px;
+}
+```
+
+示例：水平方向和垂直方向分别设置边框间距(10px为水平间距，30px为垂直间距）
+
+```css
+table {
+  border-spacing: 10px 30px;
+}
+```
+
+
 ## caption-side 表格标题位置
 
 取值：
