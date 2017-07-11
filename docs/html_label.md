@@ -110,6 +110,17 @@ media属性也可以通过css的@media选择器指定。
 ### 示例
 
 
+## table 表格
+
+## caption 表格标题
+
+## tr 表格行
+
+## th 表格头部单元格（表格数据）
+
+## td 表格普通单元格（表格数据）
+
+
 ## article(H5)
 ## nav(H5)
 ## header(H5)

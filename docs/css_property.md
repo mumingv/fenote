@@ -247,6 +247,21 @@ border-radius: 1.5em;
 参考：border-radius。
 
 
+## caption-side 表格标题位置
+
+取值：
+- top（默认值）
+- bottom
+
+###  
+
+```css
+table {
+  caption-side: bottom;
+}
+```
+
+
 ## color 前景色
 
 该属性控制元素的前景色，包含文本颜色和边框颜色。如果需要单独设置边框颜色的话，可以使用border-color属性。
@@ -702,72 +717,6 @@ em {
 ```css
 body {
   font-family: "Courier New", Courier, monospace;
-}
-```
-
-
-## font-size 字体大小
-
-######  
-
-设置字体大小的几种方式：
-
-|方式            	|含义           |备注               		|
-|-------------------|---------------|---------------------------|
-|px                 |像素           |示例：12px                 |
-|%                  |基于父元素的百分比|示例：120%              |
-|em                 |基于父元素的百分比|示例：1.2em             |
-|关键字             |如：small、medium等|small一般为12px        |
-
-#### 关键字取值
-
-- xx-small
-- x-small
-- small
-- medium
-- large
-- x-large
-- xx-large
-
-
-#### 默认大小
-
-默认字体大小为16px，h1为200%，h2为150%，h3为120%，h4为100%，h5和h6更小一些。
-
-
-###  
-
-示例：推荐使用方式
-
-```css
-body { font-size: small; }
-h1 { font-size: 150% }
-h2 { font-size: 120% }
-```
-
-
-## font-style 字体样式
-
-属性取值：normal、italic和oblique。italic表示使用斜体字体，oblique表示使用倾斜文字。
-
-###  
-
-```css
-h1 {
-  font-style: italic;
-}
-```
-
-
-## font-weight 字体粗细
-
-属性取值：normal和bold。其他取值（如：ligther和bolder，以及100的整数倍）都不要使用。
-
-###  
-
-```css
-h1 {
-  font-weight: normal;
 }
 ```
 
