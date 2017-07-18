@@ -18,6 +18,7 @@
 
 ## 读书笔记
 - [《HF-HTML&CSS》](#docs/book_hf_htmlcss)
+- [《HF-HTML5-Programming》](#docs/book_hf_html5programming)
 - [《锋利的jQuery》](#docs/book_sharp_jquery)
 
 
