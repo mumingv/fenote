@@ -52,3 +52,7 @@ function displayDate() {
 ## 其他
 
 
+## 说明
+
+1. JS是区分大小写的，比如：myvariable和MyVariable是两个不同的变量；
+
