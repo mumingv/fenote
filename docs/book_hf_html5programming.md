@@ -1,5 +1,9 @@
 # HF-HTML5-Programming
 
+源码下载：http://www.wickedlysmart.com/head-first-html5/
+
+GitHub: https://github.com/mumingv/Head-First-HTML5
+
 ## 认识HTML5
 
 略。
