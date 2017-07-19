@@ -45,11 +45,15 @@ var scoops = 3;
 
 ## 函数
 
+######  
+
 ```javascript
 function displayDate() {
     document.getElementById("demo").innerHTML=Date();
 }
 ```
+
+- 调用函数时，如果参数是基本类型（数字、字符串、布尔值），则为值传递；如果参数是数组或对象，则为引用传递；
 
 
 ## 字符串
