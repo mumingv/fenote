@@ -83,7 +83,7 @@ $ npm install -g cnpm --registry=https://registry.npm.taobao.org
 </font>
 
 
-## 安装vue的官方命令行工具
+### 安装vue的官方命令行工具
 
 ```
 $ npm install --global vue-cli
