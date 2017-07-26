@@ -102,7 +102,7 @@ $ vue -V
 创建项目
 
 ```
- vue init webpack my-first-vue-project
+$ vue init webpack my-first-vue-project
 
 ? Project name my-first-vue-project
 ? Project description my first vue project
@@ -138,8 +138,44 @@ http://localhost:8080
 ```
 
 
+### 常见问题
+
+#### 重启电脑后node、npm和vue命令都不能使用了？
+
+查询当前使用的版本，v8.2.1前面没有箭头指向，表示未选择node版本。
+
+```
+$ nvm ls
+    	v8.2.1
+node -> stable (-> v8.2.1) (default)
+stable -> 8.2 (-> v8.2.1) (default)
+iojs -> iojs- (-> N/A) (default)
+```
+
+执行nvm use命令解决。
+
+```
+$ nvm use 8.2
+Now using node v8.2.1 (npm v5.3.0)
+$ nvm ls
+->       v8.2.1
+node -> stable (-> v8.2.1) (default)
+stable -> 8.2 (-> v8.2.1) (default)
+iojs -> iojs- (-> N/A) (default)
+```
+
+
 ## vue.js及相关工具介绍
 
+webpack用于将.vue文件打包成.html、.css和.js文件，其中的.js文件就对应`new Vue({...})`创建的一个对象。
+
+.vue文件的组成包含如下三个方面：
+
+```
+HTML: <template></template>
+CSS: <style></style>
+JS: <script></script>
+```
 
 ## todolist项目学习
 
