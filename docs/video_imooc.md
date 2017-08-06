@@ -21,4 +21,4 @@
 ## Vue.js
 
 - [《vue.js入门基础》](#docs/imooc_vue_basic)
-
+- [《实战：数字产品电商平台》](#docs/imooc_vue_platform)

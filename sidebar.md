@@ -21,6 +21,7 @@
 - [《HF-HTML&CSS》](#docs/book_hf_htmlcss)
 - [《HF-HTML5-Programming》](#docs/book_hf_html5programming)
 - [《锋利的jQuery》](#docs/book_sharp_jquery)
+- [《Vue2实践揭秘》](#docs/book_vue_in_action)
 
 
 ## 视频笔记

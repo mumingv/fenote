@@ -88,6 +88,10 @@ $ npm install -g cnpm --registry=https://registry.npm.taobao.org
 ```
 $ npm install --global vue-cli
 ```
+或
+```
+$ npm install -g vue-cli
+```
 
 安装成功后会生成一个vue命令。
 
@@ -167,6 +171,8 @@ iojs -> iojs- (-> N/A) (default)
 
 ## vue.js及相关工具介绍
 
+### vue文件组成
+
 webpack用于将.vue文件打包成.html、.css和.js文件，其中的.js文件就对应`new Vue({...})`创建的一个对象。
 
 .vue文件的组成包含如下三个方面：
@@ -177,6 +183,29 @@ CSS: <style></style>
 JS: <script></script>
 ```
 
+
+### vue组件
+
+vue组件就是一个vue文件，同时包含HTML、CSS和JS。
+
+
+### 双向绑定
+
+页面中的用户输入绑定到JS中的变量，而JS中的变量又绑定到页面中的输出。
+
+
+
 ## todolist项目学习
+
+
+
+
+
+
+
+
+
+
+
 
 
