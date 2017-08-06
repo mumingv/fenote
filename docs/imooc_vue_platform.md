@@ -1,4 +1,4 @@
-# 数字产品电商平台
+# 实战：数字产品电商平台
 
 ## 课程信息
 
@@ -31,7 +31,7 @@ Vue.js的几个特点：
 
 ## Vue.js简介
 
-### vue三个特点
+### vue的三个特点
 
 #### 响应式 - 双向绑定
 
@@ -87,7 +87,7 @@ new Vue({
 ```
 
 
-### vue实例对象
+### vue的实例对象
 
 vue实例对象即为通过Vue类进行实例化的对象。如下所示：
 
@@ -158,13 +158,354 @@ new Vue({
 参考：https://cn.vuejs.org/v2/guide/instance#实例生命周期
 
 
-## 环境搭建和常用插件
+### Vue的组件
+
+#### 简单实例
+
+```javascript
+// 引入库'vue'，import关键字是ES6的语法，类似于之前的require关键字
+import Vue from 'vue'
+
+// 实例化一个Vue对象，将Vue组件加入到页面上，这里的'new Vue'是一个根组件
+new Vue({
+	el: '#app',
+	template: "<p>hello world {{ word }}</p>",  // 原index.html页面中的div元素会被模版里的p元素替换
+	data: {
+		word: 'hello world2'  // 数据渲染，这里的word对应模版中的{{ word }}
+	}
+})
+```
 
 
+#### 组件注册和引入
+
+##### 全局组件
+
+```javascript
+//main.js
+// 注册全局组件
+Vue.component('my-header', {
+	template: '<p>this is my header</p>'
+})
+```
+
+```html
+// index.html
+<div id="app">
+    <my-header></my-header>
+    hello
+</div>
+```
 
 
+##### 局部组件
+
+<font color="red">
+注意：组件里的data不能使用引用赋值，而必须使用函数返回对象的形式赋值。
+</font>
 
 
+```javascript
+// 引入库'vue'，import关键字是ES6的语法，类似于之前的require关键字
+import Vue from 'vue'
+
+// 子子组件对象
+var myHeaderChild = {
+	template: '<p>i am my header child. {{ name }} </p>',
+	data: function() {
+		return {
+			name: 'Henry'
+		}
+	}
+}
+
+// 子组件对象
+var myHeader =  {
+	template: '<p><my-header-child></my-header-child>this is my header</p>',
+	components: {
+		'my-header-child': myHeaderChild
+	}
+}
+
+// 实例化一个Vue对象，将Vue组件加入到页面上，这里的'new Vue'是一个根组件
+new Vue({
+	el: '#app',
+	data: {
+		word: 'hello world2'  // 数据渲染，这里的word对应模版中的{{ word }}
+	},
+	// 子组件（非全局组件）
+	components: {
+		'my-header': myHeader
+	}
+})
+```
+
+```html
+// index.html
+<div id="app">
+    <my-header></my-header>
+    hello
+</div>
+```
+
+
+### vue的相关概念
+
+- 全局api
+- 实例选项
+- 实例属性／方法
+- 指令
+- 内置组件
+
+
+## 功能接口（1）
+
+基础代码：
+
+```html
+// index.html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>vuedemo2</title>
+  </head>
+  <body>
+    <div id="app">
+    </div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
+```
+
+```javascript
+// main.js
+import Vue from 'vue'
+import App from './App'
+
+new Vue({
+	el: '#app',
+	// vue2.0需要使用render方法渲染外部引入的App组件，这个是ES6的写法（函数只有一个参数时可以这样简写）
+	// render: h => h(App)
+	// 等价于：
+	render: function(h) {
+		return h(App)
+	}
+})
+```
+
+```javascript
+// App.vue
+<template>
+  <div>
+    {{ hello }}
+    <p v-text="hello"></p>
+    <p v-html="hello"></p>
+  </div>
+</template>
+
+<script>
+export default {
+  data: function() {
+    return {
+      hello: '<span>world</span>'
+    }
+  }
+}
+</script>
+
+<style>
+html {
+  height: 100%;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#app {
+  color: #2c3e50;
+  margin-top: -100px;
+  max-width: 600px;
+  font-family: Source Sans Pro, Helvetica, sans-serif;
+  text-align: center;
+}
+</style>
+```
+
+
+### 文本渲染 v-html v-text {{}}
+
+#### 区别
+
+`v-text`和`{{}}`一样，仅仅是字符串的简单替换。而`v-html`会解析字符串中的html标签。
+
+
+#### {{}}中表达式的写法
+
+```javascript
+// App.vue
+<template>
+  <div>
+    <p>{{ num + 1 }}</p>
+    <p>{{ status ? 'success' : 'fail'}}</p>
+  </div>
+</template>
+
+<script>
+export default {
+  data: function() {
+    return {
+      num: 1,
+      status: true
+    }
+  }
+}
+</script>
+```
+
+
+### 列表渲染 v-for 数组、对象、子组件
+
+#### 数组
+
+```javascript
+// App.vue
+<template>
+  <div>
+    <ul>
+      <li v-for="(item, index) in list" :class="{odd:index % 2}">{{ item.name }} - {{ item.price }} - {{ index }}</li>
+    </ul>
+  </div>
+</template>
+
+<script>
+export default {
+  data: function() {
+    return {
+      list: [
+        {
+          name: 'apple',
+          price: 34
+        },
+        {
+          name: 'banana',
+          price: 56
+        },
+        {
+          name: 'pear',
+          price: 37
+        }
+      ]
+    }
+  }
+}
+</script>
+
+<style>
+.odd {
+  display: none;
+}
+</style>
+```
+
+
+#### 对象
+
+```javascript
+// App.vue
+<template>
+  <div>
+    <ul>
+      <li v-for="(value, key) in objList">{{ key + " " + value }}</li>
+    </ul>
+  </div>
+</template>
+
+<script>
+export default {
+  data: function() {
+    return {
+      objList: {
+        name: 'apple',
+        price: 34,
+        color: 'red',
+        weight: 14
+      }
+    }
+  }
+}
+</script>
+```
+
+
+#### 子组件
+
+```javascript
+// App.vue
+<template>
+  <div>
+    {{ hello }}
+  </div>
+</template>
+
+<script>
+export default {
+  data: function() {
+    return {
+      hello: 'i am component a'
+    }
+  }
+}
+</script>
+
+<style scoped>
+
+</style>
+```
+
+```javascript
+// App.vue
+<template>
+  <div>
+    <component-a v-for="(value, key) in objList" key="key "></component-a>
+  </div>
+</template>
+
+<script>
+import componentA from './components/a'
+export default {
+  components: {componentA},
+  data: function() {
+    return {
+      objList: {
+        name: 'apple',
+        price: 34,
+        color: 'red',
+        weight: 14
+      }
+    }
+  }
+}
+</script>
+```
+
+<font color="red">
+说明：也可以写成下面的形式。
+</font>
+
+```
+<componentA v-for="(value, key) in objList" key="key "></componentA>
+```
+
+``` 
+components: {
+    componentA: componentA
+},
+```
 
 
 
