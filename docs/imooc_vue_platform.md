@@ -508,6 +508,227 @@ components: {
 ```
 
 
+### 列表数据的同步更新方法（双向绑定）
+
+方法1: 使用数组的push方法增加一项
+
+```javascript
+// App.vue
+<template>
+  <div>
+    <ul>
+      <li v-for="(item, index) in list">{{ item.name }} - {{ item.price }}</li>
+    </ul>
+    <button v-on:click="addItem"></button>
+  </div>
+</template>
+
+<script>
+export default {
+  data: function() {
+    return {
+      list: [
+        {
+          name: 'apple',
+          price: 34
+        },
+        {
+          name: 'banana',
+          price: 56
+        },
+        {
+          name: 'pear',
+          price: 37
+        }
+      ]
+    }
+  },
+  methods: {
+    addItem() {
+      this.list.push({
+        name: 'pineapple',
+        price: 256
+      })
+      console.log(this.list)
+    }
+  }
+}
+</script>
+```
+
+方法2: 使用全局API设置数组的某一项
+
+```
+<script>
+import Vue from 'vue'
+export default {
+  data: function() {
+    return {
+      list: [
+        {
+          name: 'apple',
+          price: 34
+        },
+        {
+          name: 'banana',
+          price: 56
+        },
+        {
+          name: 'pear',
+          price: 37
+        }
+      ]
+    }
+  },
+  methods: {
+    addItem() {
+      Vue.set(this.list, 1, {
+        name: 'pineapple',
+        price: 256
+      })
+      console.log(this.list)
+    }
+  }
+}
+</script>
+```
+
+
+### Vue标签属性和条件渲染
+
+#### 一般属性绑定
+
+标签属性的绑定使用v-bind指令，该绑定是一种动态绑定，即：当属性值变量在其他地方被修改以后，该属性值也会动态地改变。
+
+```html
+<a v-bind:href="link" v-bind:title="hello">to baidu</a>
+```
+
+可以通过v-bind将变量值带入到组件当中去使用。
+
+```
+<componentA v-bind:dataA="dataA"></componentA>
+```
+
+
+#### class绑定
+
+通过v-bind绑定的class和原生的class属性是不冲突的。
+
+```html
+<template>
+  <a class="link-ref" v-bind:class="classStr">to baidu</a>
+</template>
+```
+
+```javascript
+<script>
+export default {
+  data: function() {
+    return {
+      classStr: 'red-font'
+    }
+  }
+}
+</script>
+```
+
+通过v-bind绑定的class可以使用对象。
+
+```html
+<template>
+  <a class="link-ref" v-bind:class="classStr">to baidu</a>
+</template>
+```
+
+```javascript
+<script>
+export default {
+  data: function() {
+    return {
+      className: {
+        'red-font': false,
+        'blue-font': true
+      }
+    }
+  }
+}
+</script>
+```
+
+
+#### style绑定
+
+```html
+<template>
+  <a class="link-ref" v-bind:style="linkCss">to baidu</a>
+</template>
+```
+
+```javascript
+<script>
+export default {
+  data: function() {
+    return {
+      linkCss: {
+        'color': 'red',
+        'font-size': '20px'
+      }
+    }
+  }
+}
+</script>
+```
+
+
+#### 条件渲染 v-if v-show v-else
+
+v-if和v-show的区别：v-if通过增删DOM元素的方式控制是否显示，v-show通过设置display属性的方式控制是否显示。
+
+```html
+<template>
+  <a v-if="isPartA">partA</a>
+  <a v-show="!isPartA">partB</a>
+  <button v-on:click="toggle">toggle</button>
+</template>
+```
+
+```javascript
+<script>
+export default {
+  data: function() {
+    return {
+      isPartA: true
+    }
+  },
+  methods: {
+    addItem() {
+      Vue.set(this.list, 1, {
+        name: 'pineapple',
+        price: 256
+      })
+      console.log(this.list)
+    },
+    toggle() {
+      this.isPartA = !this.isPartA
+    }
+  }
+}
+</script>
+```
+
+v-else使用示例：
+
+```html
+<a v-if="isPartA">partA</a>
+<a v-else>no-data</a>
+```
+
+
+
+
+
+
 
 
 
