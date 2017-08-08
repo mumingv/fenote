@@ -725,6 +725,162 @@ v-else使用示例：
 ```
 
 
+### 事件绑定 - 内置事件绑定 v-on
+
+#### 基本写法
+
+v-on是指令，click是参数，stop是修改器。
+
+```html
+<button v-on:click="toggle">toggle</button>
+```
+
+#### 缩写形式
+
+v-on指令可以缩写成如下形式：
+
+```html
+<button @click="toggle">toggle</button>
+```
+
+#### 使用修改器
+
+下面的修改器.stop表示“阻止冒泡事件“。
+
+```html
+<button v-on:click.stop="toggle">toggle</button>
+```
+
+下面的修改器.enter表示按下回车键时执行执行对应的处理函数。
+
+方式1: 使用键别名
+
+```html
+<input @keydown.enter="onKeydown">
+```
+
+方式2: 使用键代码
+
+```html
+<input @keydown.13="onKeydown">
+```
+
+
+### 事件绑定 - 自定义事件绑定
+
+针对子组件向外触发的自定义事件，步骤如下：
+
+#### 引入子组件
+
+```
+// App.vue
+<template>
+  <div>
+    <ul>
+    <comA></comA>
+  </div>
+</template>
+
+<script>
+import Vue from 'vue'
+import comA from './components/a'
+export default {
+  components: {
+    comA
+  }
+}
+</script>
+```
+
+
+#### 根组件增加自定义事件处理函数
+
+其中的my-event为自定义事件名称；onComAMyEvent是事件处理函数，其参数paramFromA由子组件使用emit触发事件时带过来的。
+
+```
+// App.vue
+<template>
+  <div>
+    <ul>
+    <comA @my-event="onComAMyEvent"></comA>
+  </div>
+</template>
+
+<script>
+import Vue from 'vue'
+import comA from './components/a'
+export default {
+  components: {
+    comA
+  },
+  methods: {
+    onComAMyEvent(paramFromA) {
+      console.log("onComAMyEvent " + paramFromA)
+    }
+  }
+}
+</script>
+```
+
+
+#### 子组件触发事件
+
+子组件新增一个按钮用于触发自定义事件。
+
+```
+// a.vue
+<template>
+  <div>
+    {{ hello }}
+    <button @click="emitMyEvent">emit</button>
+  </div>
+</template>
+
+<script>
+export default {
+  data: function() {
+    return {
+      hello: 'i am component a'
+    }
+  },
+  methods: {
+    emitMyEvent() {
+      this.$emit('my-event', this.hello)
+    }
+  }
+}
+</script>
+```
+
+
+### 事件绑定 - 表单事件绑定 v-model
+
+v-model指令有lazy、number和trim这三个修饰符。
+
+```html
+<template>
+  <div>
+    <input type="text" name="" v-model.lazy="myVal">
+    {{ myVal }}
+  </div>
+</template>
+
+<script>
+import Vue from 'vue'
+
+export default {
+  data: function() {
+    return {
+      myVal: ''
+    }
+  }
+}
+</script>
+```
+
+
+
+
 
 
 
