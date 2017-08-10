@@ -853,9 +853,13 @@ export default {
 ```
 
 
-### 事件绑定 - 表单事件绑定 v-model
+### 事件绑定 - 表单事件绑定
 
-v-model指令有lazy、number和trim这三个修饰符。
+使用v-model将input表单元素中的值和js-data中的值进行双向绑定
+
+#### input-text 文本输入框
+
+v-model指令有lazy、number和trim这三个修饰符。lazy表示执行回车后刷新数据，而不是每输入一个字符就进行刷新。
 
 ```html
 <template>
@@ -879,11 +883,139 @@ export default {
 ```
 
 
+#### input-checkbox 多选框
+
+与input-text相比，这里的myVal变量是个数组，用于存放多选框的value值。
+
+```html
+<template>
+  <div>
+    <input type="checkbox" name="" value="apple" v-model="myVal">
+    <label>apple</label>
+    <input type="checkbox" name="" value="banana" v-model="myVal">
+    <label>banana</label>
+    <input type="checkbox" name="" value="orange" v-model="myVal">
+    <label>orange</label>
+
+    {{ myVal }}
+  </div>
+</template>
+
+<script>
+import Vue from 'vue'
+
+export default {
+  data: function() {
+    return {
+      myVal: []
+    }
+  }
+}
+</script>
+```
 
 
+#### input-radio 单选框
+
+与input-checkbox相比，这里的myVal变量是个字符串，用于存放单选框的value值。
+
+```html
+<template>
+  <div>
+    <input type="radio" name="" value="apple" v-model="myVal">
+    <label>apple</label>
+    <input type="radio" name="" value="banana" v-model="myVal">
+    <label>banana</label>
+    <input type="radio" name="" value="orange" v-model="myVal">
+    <label>orange</label>
+
+    {{ myVal }}
+  </div>
+</template>
+
+<script>
+import Vue from 'vue'
+
+export default {
+  data: function() {
+    return {
+      myVal: ''
+    }
+  }
+}
+</script>
+```
 
 
+#### select-option 下拉列表
 
+对于下拉列表，v-model需要绑定在select标签上。
+
+```html
+<template>
+  <div>
+    <select v-model="myVal">
+      <option value="0">apple</option>
+      <option value="1">banana</option>
+      <option value="2">orange</option>
+    </select>
+
+    {{ myVal }}
+  </div>
+</template>
+
+<script>
+import Vue from 'vue'
+
+export default {
+  data: function() {
+    return {
+      myVal: '1'
+    }
+  }
+}
+</script>
+```
+
+使用v-for和v-bind简化上面的写法
+
+```html
+<template>
+  <div>
+    <select v-model="myVal">
+      <option v-for="item in options" v-bind:value="item.val">{{ item.name }}</option>
+    </select>
+
+    {{ myVal }}
+  </div>
+</template>
+
+<script>
+import Vue from 'vue'
+
+export default {
+  data: function() {
+    return {
+      myVal: '1',
+      options: [
+        {
+          'name': 'apple',
+          'val': '0'
+        },
+        {
+          'name': 'banana',
+          'val': '1'
+        },
+        {
+          'name': 'orange',
+          'val': '2'
+        }
+      ]
+    }
+  }
+}
+</script>
+```
 
 
 

@@ -7,6 +7,7 @@
 |meta			|
 |link 			|
 |img 			|
+|input 			|
 
 
 ## HTML中哪些是块元素、哪些是内联元素？
