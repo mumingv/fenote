@@ -1018,6 +1018,148 @@ export default {
 ```
 
 
+### 计算属性和数据监听
+
+计算属性能够基于现有的属性值提供新的属性值。
+
+数据监听是指监听一个变量，当变量的值发生改变时执行一个指定的操作。
+
+#### 计算属性示例（使用computed）
+
+```html
+<template>
+  <div>
+    <input type="text" v-model="myValue">
+    {{ myValueWithoutNum }}
+  </div>
+</template>
+
+<script>
+import Vue from 'vue'
+
+export default {
+  data: function() {
+    return {
+      myValue: ''
+    }
+  },
+  computed: {
+    myValueWithoutNum: function() {
+      return this.myValue.replace(/\d/g, '')
+    }
+  }
+}
+</script>
+```
+
+
+#### 计算属性示例（使用methods）
+
+```html
+<template>
+  <div>
+    <input type="text" v-model="myValue">
+    {{ getMyValueWithoutNum() }}
+  </div>
+</template>
+
+<script>
+import Vue from 'vue'
+
+export default {
+  data: function() {
+    return {
+      myValue: ''
+    }
+  },
+  methods: {
+    getMyValueWithoutNum: function() {
+      return this.myValue.replace(/\d/g, '')
+    }
+  }
+}
+</script>
+```
+
+
+#### 数据监听示例
+
+```html
+<template>
+  <div>
+    <input type="text" v-model="myValue">
+    {{ myValue }}
+  </div>
+</template>
+
+<script>
+import Vue from 'vue'
+
+export default {
+  data: function() {
+    return {
+      myValue: ''
+    }
+  },
+  watch: {
+    myValue: function(newVal, oldVal) {
+      console.log(newVal, oldVal)
+    }
+  }
+}
+</script>
+```
+
+
+## 功能接口（2）
+
+### 组件之间的通信
+
+
+## 环境搭建与常用插件
+
+### vue-cli安装
+
+#### 项目搭建步骤
+
+1. 安装vue-cli
+
+```
+npm install vue-cli -g
+```
+
+2. 初始化项目
+
+```
+vue init webpack my-project
+```
+
+3. 安装项目依赖
+
+```
+npm install
+```
+
+4. 本地运行或发布线上版本
+
+```
+npm run dev
+```
+
+```
+npm run build
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
 
