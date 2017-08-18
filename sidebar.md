@@ -7,7 +7,6 @@
 ## 目录
 0. [前言](#README)
 0. [HTML&CSS](#docs/htmlcss)
-0. [Javascript](#docs/js)
 0. [jQuery](#docs/jquery)
 0. [Bootstrap](#docs/bootstrap)
 0. [Sublime](#docs/sublime)
@@ -15,6 +14,13 @@
 0. [Node.js](#docs/nodejs)
 0. [示例](#docs/demo)
 0. [参考资料](#docs/reference)
+
+
+## JavaScript
+0. [基本语法](#docs/js_basic_syntax)
+0. [关键字](#docs/js_keyword)
+0. [常用函数](#docs/js_function)
+0. [FAQ](#docs/js_faq)
 
 
 ## 读书笔记
