@@ -1115,6 +1115,8 @@ export default {
 
 ### 组件之间的通信
 
+略。
+
 
 ## 环境搭建与常用插件
 
@@ -1149,6 +1151,272 @@ npm run dev
 ```
 npm run build
 ```
+
+
+### vue-router
+
+#### 概念
+
+路由就是根据不同的地址跳转到不同的页面，路由的实现分为服务器端路由和前端路由两种。
+
+
+#### 安装
+
+```
+cnpm install vue-router --save
+```
+
+
+#### 设置
+
+<font color="red">
+注意：new VRouter 中的参数名称是routes，而不是routers。
+</font>
+
+示例如下：
+
+```html
+// main.js
+// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import Vue from 'vue'
+import App from './App'
+import VRouter from 'vue-router'
+import Apple from './components/Apple'
+import Banana from './components/Banana'
+
+Vue.use(VRouter)
+
+Vue.config.productionTip = false
+
+let router = new VRouter({
+  routes: [
+    {
+      path: '/apple',
+      component: Apple
+    },
+    {
+      path: '/banana',
+      component: Banana
+    }
+  ]
+})
+
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router: router,  // 两者相等，可以简写为：router,
+  template: '<App/>',
+  components: { App }
+})
+```
+
+```html
+//App.vue
+<template>
+  <div id="app">
+    <img src="./assets/logo.png">
+    <router-view></router-view>
+    <router-link :to="{path: 'apple'}">to apple</router-link>
+    <router-link :to="{path: 'banana'}">to banana</router-link>
+  </div>
+</template>
+
+<script>
+//import Hello from './components/Hello'
+
+export default {
+  name: 'app',
+  components: {
+    //Hello
+  }
+}
+</script>
+
+<style>
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
+```
+
+```html
+//Apple.vue
+<template>
+  <h1>I'm apple.</h1>
+</template>
+
+<script>
+export default {
+  name: 'apple',
+  data () {
+    return {
+    }
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+
+</style>
+
+```
+
+```html
+//Banana.vue
+<template>
+  <h1>I'm banana.</h1>
+</template>
+
+<script>
+export default {
+  name: 'banana',
+  data () {
+    return {
+    }
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+</style>
+```
+
+
+#### 路由参数
+
+代码参考：[github](https://github.com/mumingv/fe/commit/975b459b4850a65af89678f016de526cf58ea48f)。
+
+```
+//main.js
+let router = new VRouter({
+  routes: [
+    {
+      path: '/apple/:color/detail/:type',
+      component: Apple
+    },
+    {
+      path: '/banana',
+      component: Banana
+    }
+  ]
+})
+```
+
+```
+//Apple.vue
+<template>
+  <div>
+    <h1>I'm apple.</h1>
+    <p>{{ this.$route.params.color }}</p>
+    <button @click="getParam">get param</button>
+  </div>
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+    }
+  },
+  methods: {
+    getParam() {
+      console.log(this.$route.params)
+    }
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+
+</style>
+```
+
+
+#### 路由嵌套
+
+代码参考：[github](https://github.com/mumingv/fe/commit/42baafce288afb3233c97e76454ef9da5b531ea7)。
+
+
+#### 命名的路由视图、路由重定向
+
+略。
+
+
+## 项目实践-首页
+
+### 项目框架搭建（layout、路由切换）
+
+#### layout
+
+代码参考：[github](https://github.com/mumingv/fe/commit/3a6c7657f5bede2c66713a55c8441baadf93b16d)。
+
+参考：CSS样式
+
+```
+http://meyerweb.com/eric/tools/css/reset/
+```
+
+
+#### 路由切换
+
+代码参考：[github](https://github.com/mumingv/fe/commit/ed5fe9e935edccc65a3497899a42f762bf11b97e)。
+
+
+### 首页 - 信息列表 - 全部产品
+
+代码参考：[github](https://github.com/mumingv/fe/commit/49faa6da94cc24efdcd835fcc6df2c6989b0096a)。
+
+
+### 首页 - 信息列表 - 最新消息
+
+代码参考：[github](https://github.com/mumingv/fe/commit/bf0c8158676a2dbd0125222c4d45060322056bc9)。
+
+
+### 首页 - vue-resource实现Ajax获取信息数据、json-server模拟数据
+
+vue-resource代码参考：[github](https://github.com/mumingv/fe/commit/8d47c2e93222123ab2c6323a3f1e5925a6e56da5)。
+
+json-servere代码参考：[github](https://github.com/mumingv/fe/commit/fca40307c761f0acd22e627025bcc30afe0a0a50)。
+
+
+### 首页 - express启动数据服务
+
+修改新闻列表样式：[github](https://github.com/mumingv/fe/commit/68a72516f590381ee66b571bd37a08718af3291d)。
+
+#### express服务
+
+json-server只能通过get请求获取数据，无法使用post请求获取数据。express服务可以同时支持get和post两种请求方式。
+
+代码参考：[github](https://github.com/mumingv/fe/commit/800cf7a288667f266e3d51011ddf0586c3bb1095)。
+
+启动服务之后，可以通过如下方式获取数据。
+
+```
+http://localhost:8081/api/getNewsList
+```
+
+
+### 首页 - 幻灯片组件
+
+图片通过js引用到项目中，需要require关键字进行引用。
+
+
+
+
+
+
+
+
+
 
 
 

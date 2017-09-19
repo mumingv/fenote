@@ -16,11 +16,19 @@
 0. [参考资料](#docs/reference)
 
 
+## 相关软件工具
+0. [npm](#docs/software_npm)
+
+
 ## JavaScript
 0. [基本语法](#docs/js_basic_syntax)
-0. [关键字](#docs/js_keyword)
 0. [常用函数](#docs/js_function)
 0. [FAQ](#docs/js_faq)
+0. [参考资料](#docs/js_reference)
+
+## Vue
+0. [插件](#docs/vue_component)
+0. [FAQ](#docs/vue_faq)
 
 
 ## 读书笔记
@@ -28,6 +36,7 @@
 - [《HF-HTML5-Programming》](#docs/book_hf_html5programming)
 - [《锋利的jQuery》](#docs/book_sharp_jquery)
 - [《Vue2实践揭秘》](#docs/book_vue_in_action)
+- [《廖雪峰-JavaScript教程》](#docs/book_lxf_js)
 
 
 ## 视频笔记
