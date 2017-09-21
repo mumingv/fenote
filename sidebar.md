@@ -11,7 +11,6 @@
 0. [Bootstrap](#docs/bootstrap)
 0. [Sublime](#docs/sublime)
 0. [ECharts](#docs/echarts)
-0. [Node.js](#docs/nodejs)
 0. [示例](#docs/demo)
 0. [参考资料](#docs/reference)
 
@@ -25,6 +24,11 @@
 0. [常用函数](#docs/js_function)
 0. [FAQ](#docs/js_faq)
 0. [参考资料](#docs/js_reference)
+
+## Node.js
+0. [基本语法](#docs/nodejs_basic_syatax)
+0. [常用函数](#docs/nodejs_function)
+0. [参考资料](#docs/nodejs_reference)
 
 ## Vue
 0. [插件](#docs/vue_component)

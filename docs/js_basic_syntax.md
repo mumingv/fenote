@@ -209,6 +209,26 @@ foo(1);
 ```
 
 
+### \_\_proto\_\_
+
+`__proto__`用于原型继承。
+
+#### 示例：将对象的原型指向另一个对象，使其拥有另一个对象的属性和方法
+
+```
+var Bird = {
+    fly: function () {
+        console.log(this.name + ' is flying...');
+    }
+};
+
+xiaoming.__proto__ = Bird;
+```
+```
+xiaoming.fly(); // 小明 is flying...
+```
+
+
 ### arguments
 
 arguments仅仅在函数内部使用，其保存了用户传入的所有参数。
