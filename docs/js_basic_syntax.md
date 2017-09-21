@@ -286,7 +286,19 @@ function foo() {
 
 ### typeof
 
-typeof用于检查变量的类型。
+typeof用于检查对象/变量的类型，可能的取值有下面几种：
+
+```
+typeof 123; // 'number'
+typeof NaN; // 'number'
+typeof 'str'; // 'string'
+typeof true; // 'boolean'
+typeof undefined; // 'undefined'
+typeof Math.abs; // 'function'
+typeof null; // 'object'
+typeof []; // 'object'
+typeof {}; // 'object'
+```
 
 #### 示例：入参检查
 
