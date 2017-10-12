@@ -1124,25 +1124,25 @@ export default {
 
 #### 项目搭建步骤
 
-1. 安装vue-cli
+1.安装vue-cli
 
 ```
 npm install vue-cli -g
 ```
 
-2. 初始化项目
+2.初始化项目
 
 ```
 vue init webpack my-project
 ```
 
-3. 安装项目依赖
+3.安装项目依赖
 
 ```
 npm install
 ```
 
-4. 本地运行或发布线上版本
+4.本地运行或发布线上版本
 
 ```
 npm run dev

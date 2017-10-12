@@ -5,6 +5,7 @@
 - [《IT菜鸟逆袭指南（江湖篇）》](#docs/imooc_htmlcss_itbird)
 - [《CSS深入理解之border》](#docs/imooc_htmlcss_border)
 - [《导航条菜单的制作》](#docs/imooc_htmlcss_nav_bar)
+- [《分页页码制作》](#docs/imooc_htmlcss_pagination)
 
 
 ## JavaScript

@@ -20,6 +20,11 @@
 - [AdminLTE 基于Bootstrap的后台模板](https://almsaeedstudio.com/themes/AdminLTE/index2.html)
 
 
+## 图标
+
+- [阿里矢量图表库](http://www.iconfont.cn/)
+
+
 ## 其他
 
 - [BootCDN: 提供各种开源项目CDN服务，如: Bootstrap, jQuery等](http://www.bootcdn.cn/)
