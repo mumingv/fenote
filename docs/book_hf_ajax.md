@@ -147,6 +147,124 @@ function displayDetails() {
 
 ## 设计Ajax应用
 
+### 
+
+几种常用的控件有：`<input>`是用户输入控件；`<select>`是用户选择控件；`<textarea>`是多行文本编辑控件。
+
+`<label>`元素表示用户界面中x项目的标题，通常与控件配合使用。
+
+### 源码分析
+
+###### 
+
+```javascript
+function showUsernameStatus() {
+  if (request.readyState == 4) {
+    if (request.status == 200) {
+      if (request.responseText == "okay") {
+        document.getElementById("username").className = "approved";
+        document.getElementById("register").disabled = false;
+      } else {
+        document.getElementById("username").className = "denied";
+        document.getElementById("username").focus();
+        document.getElementById("username").select();
+        document.getElementById("register").disabled = true;
+      }
+    }
+  }
+}
+```
+
+HTMLInputElement的focus()方法用于定位到控件内容，默认继续输入内容时原有内容不会被覆盖；select()方法也用于定位到控件内容，默认继续输入内容时原有内容会被覆盖。参考：[MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLInputElement)。
+
+```css
+#username {
+  background: #fff url("../images/status.gif") 202px 0px no-repeat;
+  padding: 0 20px 0 2px; 
+  width: 198px;
+}
+#username.thinking {
+  background-position: 202px -19px;
+}
+#username.approved {
+  background-position: 202px -35px;
+}
+#username.denied {
+  background-color: #FF8282;
+  background-position: 202px -52px;
+}
+```
+
+background-color是从元素的边框左上角起到边框右下角止；background-image却不一样，在no-repeat的情况下，它是从padding边缘的左上角起而到border的右下角边缘止。
+
+
+## JavaScript事件
+
+### 源码分析
+
+###### 
+
+```css
+#navigation a {
+  display: block;
+  width: 155px;
+  border: 0px red solid;
+  padding: 140px 0 0 0;
+  margin: 0 0 10px 0;
+  height: 0;
+  overflow: hidden;
+}
+
+#navigation a#beginners {
+  background: url("../images/beginnersBtn.png") no-repeat;
+}
+#navigation a#intermediate {
+  background: url("../images/intermediateBtn.png") no-repeat;
+}
+#navigation a#advanced {
+  background: url("../images/advancedBtn.png") no-repeat;
+}
+```
+
+这里图片显示的总体思想是：在padding区域显示背景图片，将内容区的高度设置为0并配合`overflow: hidden;`以不显示a标签的内容。
+
+`width`和`height`是指内容区的宽度和高度，内容区是指padding里面的区域，不包含padding。
+
+影藏a标签内容时必须使用`height: 0;`和`overflow: hidden;`两条CSS语句才行。如果只使用`height: 0;`，虽然内容区不占用空间，但是其中的内容仍旧会显示。如果只使用`overflow: hidden;`将不会有任何效果，因为overflow属性必须基于内容区固定的场景，即必须指定width和height属性时overflow属性才会生效，
+
+
+```javascript
+function initPage() {
+  var tabs = 
+    document.getElementById("tabs").getElementsByTagName("a");
+  for (var i=0; i<tabs.length; i++) {
+    var currentTab = tabs[i];
+    currentTab.onmouseover = showHint;
+    currentTab.onmouseout = hideHint;
+    currentTab.onclick = showTab;
+  }
+
+  var buttons = 
+    document.getElementById("navigation").getElementsByTagName("a");
+  for (var i=0; i<buttons.length; i++) {
+    var currentBtn = buttons[i];
+    currentBtn.onmouseover = showHint;
+    currentBtn.onmouseout = hideHint;
+    currentBtn.onclick = showTab;
+    currentBtn.onmouseover = buttonOver;
+    currentBtn.onmouseout = buttonOut;
+  }
+}
+```
+
+`onmouseover`和`onmouseout`属性用来设置当前元素的`mouseove事件`和`mouseout事件`的事件处理函数。鼠标相关的事件还有`onmouseup`、`onmousedown`和`onmousemove`。参考：[MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/GlobalEventHandlers/onmouseover)。
+
+
+
+
+
+
+
 
 
 
