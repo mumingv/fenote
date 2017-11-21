@@ -260,6 +260,119 @@ function initPage() {
 `onmouseover`和`onmouseout`属性用来设置当前元素的`mouseove事件`和`mouseout事件`的事件处理函数。鼠标相关的事件还有`onmouseup`、`onmousedown`和`onmousemove`。参考：[MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/GlobalEventHandlers/onmouseover)。
 
 
+## 多个事件处理程序
+
+### 源码分析
+
+```javascript
+function getActivatedObject(e) {
+  var obj;
+  if (!e) {
+    // early version of IE
+    obj = window.event.srcElement;
+  } else if (e.srcElement) {
+    // IE 7 or later
+    obj = e.srcElement;
+  } else {
+    // DOM Level 2 browser
+    obj = e.target;
+  }
+  return obj;
+}
+```
+
+标准的事件模型：都是通过`e.target`获取事件对象。
+
+IE的事件模型与标准不同：当e不是对象时通过`window.event.srcElement`获取事件对象；当e是对象时通过`e.srcElement`获取事件对象。
+
+
+```javascript
+function addEventHandler(obj, eventName, handler) {
+  if (document.attachEvent) {
+    obj.attachEvent("on" + eventName, handler);
+  } else if (document.addEventListener) {
+    obj.addEventListener(eventName, handler, false);
+  }
+}
+```
+
+标准的事件模型：通过`EventTarget.addEventListener()`方法增加事件处理函数，事件名称参数<b>不需要</b>增加`on`。参考[MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener)。
+
+IE的事件模型与标准不同：通过`EventTarget.attachEvent()`方法增加事件处理函数，事件名称参数<b>需要</b>增加`on`。参考[MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/attachEvent)。
+
+使用`document.attachEvent`和`document.addEventHandler`来判定函数是否支持。
+
+使用`addEventListener`或`attachEvent`方法可以给同一个对象增加多个事件处理函数，而通过事件属性只能增加一个事件处理函数。
+
+
+```javascript
+addEventHandler(elBtn, "mouseover", buttonOver);
+
+function buttonOver(e) {
+  console.log("buttonOver");
+  me = getActivatedObject(e);
+  me.className = "active";
+}
+```
+
+事件处理函数默认都会携带一个事件作为参数，可以根据这个事件获取对应的对象。当然也可以直接使用this关键字表示事件对象，但是这种方式在老的IE中不支持。
+
+
+## 异步应用
+
+### 源码分析
+
+```
+#coverBar {
+  width: 440px;
+  height: 115px;
+  position: absolute;
+  top: 495px;
+  left: 182px;
+  overflow: hidden;
+}
+
+#coverBar img {
+  position: absolute;
+  top: 0;
+}
+```
+
+`position: absolute;`的定位本质上是根据最近的非static祖先元素进行定位的，而不是之前理解的根据页面左上角进行定位。
+
+
+## DOM
+
+###### 
+
+### 源码分析
+
+```
+function cellIsEmpty(cell) {
+  var image = cell.firstChild;
+  while (image.nodeName == "#text") { image = image.nextSibling; }
+  if (image.alt == "empty")
+    return true; 
+  else 
+    return false; 
+}
+```
+
+`firstChild`是[文档对象模型DOM接口](https://developer.mozilla.org/zh-CN/docs/Web/API/Document_Object_Model)`Node`的一个属性，具体参考：[MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Node)。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
