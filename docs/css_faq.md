@@ -43,6 +43,6 @@
 
 ## 如何清除页面的所有默认样式？
 
-参考：http://meyerweb.com/eric/tools/css/reset/。
+参考：[http://meyerweb.com/eric/tools/css/reset/](http://meyerweb.com/eric/tools/css/reset/)。
 
 
