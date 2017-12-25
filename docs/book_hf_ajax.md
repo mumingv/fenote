@@ -341,7 +341,7 @@ function buttonOver(e) {
 `position: absolute;`的定位本质上是根据最近的非static祖先元素进行定位的，而不是之前理解的根据页面左上角进行定位。
 
 
-## DOM
+## 文档对象模型
 
 ###### 
 
@@ -360,6 +360,7 @@ function cellIsEmpty(cell) {
 
 `firstChild`是[文档对象模型DOM接口](https://developer.mozilla.org/zh-CN/docs/Web/API/Document_Object_Model)`Node`的一个属性，具体参考：[MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Node)。
 
+节点主要包括元素节点、属性节点和文本节点。
 
 
 
