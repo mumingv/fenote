@@ -49,6 +49,7 @@
 ## Vue
 0. [插件](#docs/vue_component)
 0. [FAQ](#docs/vue_faq)
+0. [参考资料](#docs/vue_reference)
 
 
 ## 读书笔记

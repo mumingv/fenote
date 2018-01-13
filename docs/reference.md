@@ -22,7 +22,8 @@
 
 ## 图标
 
-- [阿里矢量图表库](http://www.iconfont.cn/)
+- [阿里矢量图表库（http://www.iconfont.cn/）](http://www.iconfont.cn/)
+- [font-awesome（http://fontawesome.io/）](http://fontawesome.io/)，[中文版](http://www.fontawesome.com.cn/)
 
 
 ## 其他
