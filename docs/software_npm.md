@@ -23,4 +23,7 @@ npm help install
 ```
 
 
+## 参考手册
+
+- [(线上) 官方参考](https://docs.npmjs.com/)
 

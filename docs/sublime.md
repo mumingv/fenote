@@ -36,7 +36,8 @@ Package Control安装方法：https://packagecontrol.io/installation
 |Emmet				|快速生成HTML/CSS代码||
 |ConvertToUTF8		|解决Sublime Text无法显示GBK编码的问题||
 |SublimeCodeIntel	|JavaScript代码自动补全|[安装参考](http://blog.csdn.net/hehexiaoxia/article/details/54134756)|
-|HTML-CSS-JS Prettify|格式化前端代码	|||
+|HTML-CSS-JS Prettify|格式化前端代码	||
+|SideBar			|增强侧边栏功能（如：在浏览器打开HTML文件）|||
 
 ### HTML-CSS-JS Prettify
 
