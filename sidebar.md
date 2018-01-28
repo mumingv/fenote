@@ -6,6 +6,8 @@
 
 ## 目录
 0. [前言](#README)
+0. [Nvm](#docs/software_nvm)
+0. [Npm](#docs/software_npm)
 0. [jQuery](#docs/jquery)
 0. [Bootstrap](#docs/bootstrap)
 0. [Sublime](#docs/sublime)
@@ -15,7 +17,6 @@
 
 
 ## 相关软件工具
-0. [npm](#docs/software_npm)
 
 
 ## HTML
@@ -42,6 +43,7 @@
 
 ## Node.js
 0. [基本语法](#docs/nodejs_basic_syatax)
+0. [关键字](#docs/nodejs_basic_keyword)
 0. [常用函数](#docs/nodejs_function)
 0. [参考资料](#docs/nodejs_reference)
 
