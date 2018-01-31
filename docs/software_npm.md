@@ -1,5 +1,10 @@
 # Npm
 
+## 参考手册
+
+- [(线上) 官方参考](https://docs.npmjs.com/)
+
+
 ## 安装
 
 先安装nvm（node版本管理工具），然后使用nvm来安装npm。
@@ -23,7 +28,6 @@ npm help install
 ```
 
 
-## 参考手册
+## 参考资料
 
-- [(线上) 官方参考](https://docs.npmjs.com/)
-
+- []
