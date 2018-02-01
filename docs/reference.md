@@ -40,6 +40,12 @@
 
 - [Jerry Qu (https://imququ.com/)](https://imququ.com/)
 
+
+## 论坛
+
+- [前端网 (http://www.qdfuns.com/)](http://www.qdfuns.com/) (用户名：mumingv)
+
+
 ## 其他
 
 - [BootCDN: 提供各种开源项目CDN服务，如: Bootstrap, jQuery等](http://www.bootcdn.cn/)
