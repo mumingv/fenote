@@ -63,6 +63,7 @@
 - [《廖雪峰-JavaScript教程》](#docs/book_lxf_js)
 - [《阮一峰-ECMAScript 6 入门》](#docs/book_ryf_es6)
 - [《深入浅出NodeJS》](#docs/book_node_js)
+- [《梁灏-Vue.js实战》](#docs/book_vuejs_in_action)
 
 
 ## 视频笔记
