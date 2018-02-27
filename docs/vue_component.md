@@ -1,5 +1,32 @@
 # 插件
 
+## 插件汇总
+
+###### 
+
+|插件类别		|插件名称					|插件作用			|备注					|
+|-----------|-----------------------|---------------|-----------------------|
+|vue框架 	|vue 					|vue框架本身		|vue框架本身				|
+|			|vue-loader				|||
+|			|vue-style-loader		|||
+|			|vue-template-compiler	|||
+|			|vue-hot-reload-api		|||
+|babel		|babel					|				|支持ES6语法				|
+|			|babel-loader			|||
+|			|babel-core				|||
+|			|babel-plugin-transform-runtime|||
+|			|babel-preset-es2015	|||
+|			|babel-runtime 			|||
+|图片、字体文件|url-loader 			|||
+|			|file-loader 			|||
+|webpack打包|webpack-merge			|合并两个webpack的配置文件||
+|			|html-webpack-plugin	|||
+|Ajax请求 	|jquery?				|Ajax请求		|this.$ajax 			|
+|			|vue-resource 			|Ajax请求 		|不再维护，不建议使用 		|
+|		 	|axios					|Ajax请求		|推荐使用					|
+|代理服务器  	|request 				|||
+
+
 ## vue-resource 使用Ajax获取数据
 
 ### 参考资料
