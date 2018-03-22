@@ -39,6 +39,7 @@
 ## 博客
 
 - [Jerry Qu (https://imququ.com/)](https://imququ.com/)
+- [淘宝前端团队 (http://taobaofed.org/)](http://taobaofed.org/)
 
 
 ## 论坛
