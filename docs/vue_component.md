@@ -27,20 +27,6 @@
 |代理服务器  	|request 				|||
 
 
-## vue-resource 使用Ajax获取数据
-
-### 参考资料
-
-GitHub: https://github.com/pagekit/vue-resource
-
-
-### 安装
-
-```bash
-cnpm install vue-resource
-```
-
-
 ## json-server 模拟服务器提供数据
 
 ### 参考资料
@@ -72,6 +58,28 @@ npm run dev
 ### 参考资料
 
 官方文档：http://element.eleme.io/
+
+
+## vue-resource 使用Ajax获取数据
+
+### 参考资料
+
+GitHub: https://github.com/pagekit/vue-resource
+
+
+### 安装
+
+```bash
+cnpm install vue-resource
+```
+
+
+## axios 使用Ajax获取数据
+
+### 参考资料
+
+GitHub: https://github.com/axios/axios
+
 
 
 
