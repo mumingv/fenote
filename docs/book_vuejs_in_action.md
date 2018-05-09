@@ -39,19 +39,46 @@ $ node proxy.js
 启动webpack服务
 
 ```
-
+$ npm run dev
 ```
+
+
+### 知乎接口
+
+- 主题列表：http://news-at.zhihu.com/api/4/themes
+- 某个主题下的文章列表：http://news-at.zhihu.com/api/4/theme/13
+- 每日推荐：http://news-at.zhihu.com/api/4/news/before/20180428
 
 
 ### 开发步骤
 
-###### 
+**13.1 分析与准备**
 
+###### 
 |日期		|事项							|备注					|
 |-----------|-------------------------------|-----------------------|
 |2018-02-27	|从第10章拷贝项目作为开发基础		|[GitHub](https://github.com/mumingv/fe/commit/2fd07f7959385c4b1ac34f571f826982e1258059)|
 |2018-02-27	|使用request实现知乎的接口代理 		|[GitHub](https://github.com/mumingv/fe/commit/05529ee348a8267c40a9820b805bbd6a2d0ad1e9)|
 |2018-02-27	|使用axios插件调用ajax请求 		|[GitHub](https://github.com/mumingv/fe/commit/0d35498061393b36f028109bbc93190f625ea19c)|
+
+
+**13.2 推荐列表与分类**
+###### 
+|日期		|事项							|备注					|
+|-----------|-------------------------------|-----------------------|
+|2018-04-27	|13.2.1 搭建基本结构	|[GitHub](https://github.com/mumingv/fe/commit/ed3dfbec4a24810639745dbca735abcf81cf25ae)|
+|2018-04-28	|13.2.2 主题日报		|[GitHub](https://github.com/mumingv/fe/commit/4b9257cbfc706d70181576698a179d060e03ded2)|
+|2018-04-27	|13.2.3 每日推荐		|[GitHub](https://github.com/mumingv/fe/commit/7e2d4d0aa57620a9aba4e540631efa82494c2e48)|
+|2018-04-27	|13.2.4 自动加载更多推荐列表	|[GitHub](https://github.com/mumingv/fe/commit/bb15de306b662dcc34113d968734a3ad037de749)|
+
+
+
+
+
+
+
+
+
 
 
 
