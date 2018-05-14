@@ -48,6 +48,7 @@ $ npm run dev
 - 主题列表：http://news-at.zhihu.com/api/4/themes
 - 某个主题下的文章列表：http://news-at.zhihu.com/api/4/theme/13
 - 每日推荐：http://news-at.zhihu.com/api/4/news/before/20180428
+- 单篇文章：http://news-at.zhihu.com/api/4/news/7097426
 
 
 ### 开发步骤
@@ -68,15 +69,15 @@ $ npm run dev
 |-----------|-------------------------------|-----------------------|
 |2018-04-27	|13.2.1 搭建基本结构	|[GitHub](https://github.com/mumingv/fe/commit/ed3dfbec4a24810639745dbca735abcf81cf25ae)|
 |2018-04-28	|13.2.2 主题日报		|[GitHub](https://github.com/mumingv/fe/commit/4b9257cbfc706d70181576698a179d060e03ded2)|
-|2018-04-27	|13.2.3 每日推荐		|[GitHub](https://github.com/mumingv/fe/commit/7e2d4d0aa57620a9aba4e540631efa82494c2e48)|
-|2018-04-27	|13.2.4 自动加载更多推荐列表	|[GitHub](https://github.com/mumingv/fe/commit/bb15de306b662dcc34113d968734a3ad037de749)|
+|2018-05-10	|13.2.3 每日推荐		|[GitHub](https://github.com/mumingv/fe/commit/7e2d4d0aa57620a9aba4e540631efa82494c2e48)|
+|2018-05-10	|13.2.4 自动加载更多推荐列表	|[GitHub](https://github.com/mumingv/fe/commit/bb15de306b662dcc34113d968734a3ad037de749)|
 
 
-
-
-
-
-
+**13.3 文章详情页**
+###### 
+|日期		|事项							|备注					|
+|-----------|-------------------------------|-----------------------|
+|2018-05-14	|13.3.1 加载内容	|[GitHub](https://github.com/mumingv/fe/commit/b29c557b2d0b3f314687d2b9de774a9251ad3237)|
 
 
 
