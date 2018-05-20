@@ -49,6 +49,7 @@ $ npm run dev
 - 某个主题下的文章列表：http://news-at.zhihu.com/api/4/theme/13
 - 每日推荐：http://news-at.zhihu.com/api/4/news/before/20180428
 - 单篇文章：http://news-at.zhihu.com/api/4/news/7097426
+- 文章评论：http://news-at.zhihu.com/api/4/story/7097426/short-comments
 
 
 ### 开发步骤
@@ -78,14 +79,64 @@ $ npm run dev
 |日期		|事项							|备注					|
 |-----------|-------------------------------|-----------------------|
 |2018-05-14	|13.3.1 加载内容	|[GitHub](https://github.com/mumingv/fe/commit/b29c557b2d0b3f314687d2b9de774a9251ad3237)|
+|2018-05-20	|13.3.2 加载评论	|[GitHub](https://github.com/mumingv/fe/commit/7d085c13a3bcd208f3a2ef9e43263fcf2c3f8e5a)|
 
 
+## 第14章 实战：电商网站项目开发
+
+### 启动方法
+
+安装插件
+
+```
+$ npm install
+```
+
+启动webpack服务
+
+```
+$ npm run dev
+```
 
 
+### 开发步骤
+
+**14.1 项目工程搭建**
+
+###### 
+|日期		|事项							|备注					|
+|-----------|-------------------------------|-----------------------|
+|2018-05-20	|拷贝第10章 ch10-webpack 的代码	|[GitHub](https://github.com/mumingv/fe/commit/3be4852c5095dd4e61867f845d8f45b8e13f9b81)|
+|2018-05-21	|14.1 项目工程搭建		|[GitHub](https://github.com/mumingv/fe/commit/e00812e8d6b5ec4a3740a40d2cf473851874f033)|
 
 
+**14.2 商品列表页**
+
+###### 
+|日期		|事项							|备注					|
+|-----------|-------------------------------|-----------------------|
+|	|14.2.1 需求分析与模块拆分	|无|
+|	|14.2.2 商品简介组件	|[GitHub---](https://github.com/mumingv/fe/commit/)|
+|	|14.2.3 列表按照价格、销量排序	|[GitHub---](https://github.com/mumingv/fe/commit/)|
+|	|14.2.4 列表按照品牌、颜色筛选	|[GitHub---](https://github.com/mumingv/fe/commit/)|
 
 
+**14.3 商品详情页**
+
+###### 
+|日期		|事项							|备注					|
+|-----------|-------------------------------|-----------------------|
+|	|14.3 商品详情页	|[GitHub---](https://github.com/mumingv/fe/commit/)|
+
+
+**14.4 购物车**
+
+###### 
+|日期		|事项							|备注					|
+|-----------|-------------------------------|-----------------------|
+|	|14.4.1 准备数据	|[GitHub---](https://github.com/mumingv/fe/commit/)|
+|	|14.4.2 显示和操作数据	|[GitHub---](https://github.com/mumingv/fe/commit/)|
+|	|14.4.3 使用优惠码	|[GitHub---](https://github.com/mumingv/fe/commit/)|
 
 
 
