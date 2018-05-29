@@ -115,8 +115,8 @@ $ npm run dev
 ###### 
 |日期		|事项							|备注					|
 |-----------|-------------------------------|-----------------------|
-|	|14.2.1 需求分析与模块拆分	|无|
-|	|14.2.2 商品简介组件	|[GitHub---](https://github.com/mumingv/fe/commit/)|
+|2018-05-21	|14.2.1 需求分析与模块拆分	|无|
+|2018-05-23	|14.2.2 商品简介组件	|[GitHub](https://github.com/mumingv/fe/commit/7754933e10c75239ad2926559ddc4150de3deb2e)|
 |	|14.2.3 列表按照价格、销量排序	|[GitHub---](https://github.com/mumingv/fe/commit/)|
 |	|14.2.4 列表按照品牌、颜色筛选	|[GitHub---](https://github.com/mumingv/fe/commit/)|
 
@@ -137,6 +137,24 @@ $ npm run dev
 |	|14.4.1 准备数据	|[GitHub---](https://github.com/mumingv/fe/commit/)|
 |	|14.4.2 显示和操作数据	|[GitHub---](https://github.com/mumingv/fe/commit/)|
 |	|14.4.3 使用优惠码	|[GitHub---](https://github.com/mumingv/fe/commit/)|
+
+
+### 开发笔记
+
+#### 配置less的方法
+
+1.安装less和less-loader插件
+
+```
+$ npm install less --save-dev
+$ npm install less-loader --save-dev
+```
+
+2.在webpack始终配置less-loader
+
+参考：`14.2.2 商品简介组件`一节代码。
+
+
 
 
 
