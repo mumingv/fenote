@@ -55,6 +55,19 @@ npm run dev
 
 ## element-ui 桌面端组件库
 
+### 安装
+
+```
+cnpm install element-ui -S
+```
+```
+  "dependencies": {
+    "axios": "^0.18.0",
+    "element-ui": "^2.4.1",
+    "vue": "^2.5.13"
+  }
+```
+
 ### 参考资料
 
 官方文档：http://element.eleme.io/
