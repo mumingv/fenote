@@ -1,5 +1,10 @@
 # Sublime
 
+## 下载
+
+官网下载：http://www.sublimetext.com/3
+
+
 ## 安装
 
 版本：Version 3.0, Build 3143
