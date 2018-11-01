@@ -4,6 +4,10 @@
 
 官网下载：http://www.sublimetext.com/3
 
+注册码：
+
+https://fatesinger.com/100237
+
 
 ## 安装
 
